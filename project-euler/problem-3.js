@@ -1,8 +1,6 @@
 /*
  * Title: Largest prime factor
- *
- * The prime factors of 13195 are 5, 7, 13 and 29. 
- * What is the largest prime factor of the number 600851475143 ?
+ * Link: https://projecteuler.net/problem=3
  */
 
 /*
@@ -16,11 +14,11 @@
  *    SET n to n / 2
  * ENDIF
  *
- * FOR each odd divisor (i) starting from 3 until n
- *    IF n is divisible by i 
+ * FOR each odd divisor (i) from 3 to n
+ *    WHILE n is divisible by i 
  *        SET largestPrimeFactor to i
  *        SET n to n / i
- *    ENDIF
+ *    ENDWHILE
  * ENDFOR
  *
  * RETURN largestPrimeFactor
@@ -35,7 +33,7 @@ function largestPrimeFactor(n) {
   }
 
   for (let i = 3; i <= n; i += 2) {
-    if (n % i === 0) {
+    while (n % i === 0) {
       largestPrimeFactor = i;
       n /= i;
     }
