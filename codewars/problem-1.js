@@ -14,6 +14,8 @@
  * FOR each element in a
  *    IF element doesn't exist in b
  *        PUSH it into filteredArray
+ *    ENDIF
+ * ENDFOR
  *
  * RETURN filteredArray
  */
