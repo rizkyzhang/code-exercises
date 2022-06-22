@@ -6,25 +6,25 @@
 /*
  * Pseudocode
  *
- * ARGUMENT a 
- * ARGUMENT b
+ * ARGUMENT arrayA 
+ * ARGUMENT arrayB 
  *
  * SET filteredArray to []
  *
- * FOR each element in a
- *    IF element doesn't exist in b
- *        PUSH it into filteredArray
- *    ENDIF
- * ENDFOR
+ * FOR each element in arrayA
+ *    IF element doesn't exist in arrayB 
+ *        APPEND it into filteredArray 
+ *    ENDIF 
+ * ENDFOR 
  *
- * RETURN filteredArray
+ * RETURN filteredArray 
  */
 
-function arrayDiff(a, b) {
+function arrayDiff(arrayA, arrayB) {
   const filteredArray = [];
 
-  for (elem of a) {
-    if (!b.includes(elem)) {
+  for (const elem of arrayA) {
+    if (!arrayB.includes(elem)) {
       filteredArray.push(elem);
     }
   }
@@ -32,8 +32,8 @@ function arrayDiff(a, b) {
   return filteredArray;
 }
 
-function arrayDiff2(a, b) {
-  return a.filter(elem => !b.includes(elem));
+function arrayDiff2(arrayA, arrayB) {
+  return arrayA.filter(elem => !arrayB.includes(elem));
 }
 
 console.log(arrayDiff2([1, 2, 3, 2], [2]));
