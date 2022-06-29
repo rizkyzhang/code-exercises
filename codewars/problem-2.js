@@ -7,7 +7,7 @@
  * Pseudocode
  *
  * ARGUMENT sentence
- * SET newSentence to []
+ * SET words to []
  *
  * IF sentence only have 1 word
  *    IF word have >= 5 letter
@@ -20,12 +20,12 @@
  *
  * FOR each word in sentence
  *    IF word have >= 5 letter
- *        REVERSE the word
- *    PUSH the word into newSentence
+ *        REVERSE word
+ *        APPEND word into words
  *    ENDIF
  * ENDFOR
  *
- * RETURN newSentence
+ * JOIN words into sentence
  */
 
 function reverseSentence(sentence) {
@@ -38,7 +38,7 @@ function reverseSentence(sentence) {
   let words = sentence.split(" ");
   let newSentence = [];
 
-  for (let word of words) {
+  for (const word of words) {
     if (word.length >= 5) {
       const reversedWord = word.split("").reverse().join("");
       newSentence.push(reversedWord);
@@ -59,7 +59,7 @@ function reverseSentence2(sentence) {
 
   return sentence
     .split(" ")
-    .map(word => {
+    .map((word) => {
       const reversedWord = word.split("").reverse().join("");
       return word.length >= 5 ? reversedWord : word;
     })
