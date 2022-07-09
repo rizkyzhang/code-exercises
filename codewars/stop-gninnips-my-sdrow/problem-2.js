@@ -1,33 +1,3 @@
-/*
- * Title: Stop gninnipS My sdroW!
- * Link: https://www.codewars.com/kata/5264d2b162488dc400000001
- */
-
-/*
- * Pseudocode
- *
- * ARGUMENT sentence
- * SET words to []
- *
- * IF sentence only have 1 word
- *    IF word have >= 5 letter
- *        REVERSE word
- *        RETURN word
- *    ELSE
- *      RETURN word
- *    ENDIF
- * ENDIF
- *
- * FOR each word in sentence
- *    IF word have >= 5 letter
- *        REVERSE word
- *        APPEND word into words
- *    ENDIF
- * ENDFOR
- *
- * JOIN words into sentence
- */
-
 function reverseSentence(sentence) {
   if (!sentence.trim().includes(" ")) {
     const word = sentence;
