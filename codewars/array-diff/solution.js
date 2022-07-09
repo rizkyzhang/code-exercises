@@ -14,4 +14,3 @@ function arrayDiff2(arrayA, arrayB) {
   return arrayA.filter((elem) => !arrayB.includes(elem));
 }
 
-console.log(arrayDiff2([1, 2, 3, 2], [2, 5]));
